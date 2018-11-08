@@ -75,7 +75,6 @@ p
     grid-area: fyld;
     display: flex;
     flex-direction: column;
-    padding-bottom: 300px;
 }
 
 .fyld_element
@@ -131,6 +130,12 @@ p
 .fyld_pris:hover
 {
     border-color: #f88;
+}
+
+.gmap
+{
+    width: 100%;
+    height: 320px;
 }
 
 .sidefod
