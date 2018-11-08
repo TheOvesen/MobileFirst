@@ -1,78 +1,91 @@
-body {
-    font-family: Helvetica Neue, Arial, sans-serif;
+body
+{
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
 }
 
-p {
+p
+{
     padding: 0 10px 0 10px;
 }
 
-.linkstate a {
+.linkstate a
+{
     color: red;
     text-decoration: none;
 }
 
-.linkstate a:hover {
+.linkstate a:hover
+{
     color: #f88;
 }
 
-.container {
+.container
+{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas:
+    grid-template-areas: 
         "siho"
         "shoree"
         "fyld"
         "bund";
 }
 
-.sidehoved {
+.sidehoved
+{
     grid-area: siho;
     background-color: white;
-
+    
     display: flex;
     flex-direction: row;
 }
 
-.sh_logo {
+.sh_logo
+{
     align-self: center;
     width: 60%;
 }
 
-.sh_boks {
+.sh_boks
+{
     height: auto;
     min-width: 0;
     margin: 10px 0 10px 0;
 }
 
-.showreel {
+.showreel
+{
     grid-area: shoree;
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.showreel_video {
+.showreel_video
+{
     width: 100%;
     overflow: hidden;
     align-self: center;
     z-index: 1;
 }
 
-.fyld {
+.fyld
+{
     grid-area: fyld;
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    padding-bottom: 300px;
 }
 
-.fyld_element {
+.fyld_element
+{
     position: relative;
     width: 100%;
 }
 
-.fyld_showreeltekst a {
+.fyld_showreeltekst a
+{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -81,29 +94,33 @@ p {
     border: 3px solid rgba(255, 255, 255, 0.3);
     padding: 10px 50px 10px 50px;
     transform: translateX(-50%) translateY(-50%);
-    z-index: 3;
+    z-index: 2;
 }
 
-.fyld_showreeltekst:hover a {
+.fyld_showreeltekst:hover a
+{
     color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 255, 255, 1);
-    z-index: 3;
 }
 
-.fyld_header {
+.fyld_header
+{
     text-align: center;
 }
 
-.fyld_bild {
+.fyld_bild
+{
     width: 100%;
     overflow: hidden;
 }
 
-.fyld_tekst {
+.fyld_tekst
+{
     width: 60%;
 }
 
-.fyld_pris {
+.fyld_pris
+{
     border: 2px solid red;
     float: right;
     margin-right: 10px;
@@ -111,25 +128,77 @@ p {
     padding: 5px 10px 5px 10px;
 }
 
-.fyld_pris:hover {
+.fyld_pris:hover
+{
     border-color: #f88;
 }
 
-.sidefod {
+.sidefod
+{
     grid-area: bund;
     height: 55px;
     background-color: #f26522;
 }
 
-.sf_ellipse {
+@keyframes elips
+{
+    from
+    {
+        max-width: 25%;
+        filter: opacity(70%);
+    }
+    to
+    {
+        max-width: 35%;
+        filter: opacity(100%);
+    }
+}
+
+@keyframes elipsBack
+{
+    from
+    {
+        max-width: 35%;
+        filter: opacity(100%);
+        
+    }
+    to
+    {
+        max-width: 25%;
+        filter: opacity(70%);
+    }
+}
+
+.sf_ellipse
+{
     position: fixed;
     right: 0;
     bottom: 0;
-    filter: opacity(70%);
     max-width: 25%;
-    z-index: 2
+    z-index: 2;
+    animation-name: elipsBack;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-.sf_ellipse:hover {
-    filter: opacity(100%);
+.sf_ellipse:hover
+{
+    animation-name: elips;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.sf_menu
+{
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 3;
+    color: white;
+    font-weight: bold;
+}
+
+.sf_menu:hover
+{
+    cursor: pointer;
 }
