@@ -24,7 +24,7 @@ p
 {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
         "siho"
         "shoree"
@@ -44,6 +44,11 @@ p
 .sh_logo
 {
     align-self: center;
+    width: 100%;
+}
+
+.sh_link
+{
     width: 60%;
 }
 
@@ -51,7 +56,7 @@ p
 {
     height: auto;
     min-width: 0;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px auto;
 }
 
 .showreel
@@ -70,20 +75,7 @@ p
     z-index: 1;
 }
 
-.fyld
-{
-    grid-area: fyld;
-    display: flex;
-    flex-direction: column;
-}
-
-.fyld_element
-{
-    position: relative;
-    width: 100%;
-}
-
-.fyld_showreeltekst a
+.showreel_tekst a
 {
     position: absolute;
     left: 50%;
@@ -96,10 +88,23 @@ p
     z-index: 2;
 }
 
-.fyld_showreeltekst:hover a
+.showreel_tekst:hover a
 {
     color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 255, 255, 1);
+}
+
+.fyld
+{
+    display: flex;
+    flex-direction: column;
+    grid-area: fyld;
+}
+
+.fyld_element
+{
+    position: relative;
+    width: 100%;
 }
 
 .fyld_header
@@ -208,3 +213,50 @@ p
     cursor: pointer;
 }
 
+@media only screen and (min-width: 800px)
+{
+    .fyld_element
+    {
+        width: 30%;
+        margin: auto auto 0 auto;
+        align-self: flex-start;
+    }
+    
+    .fyld
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .fyld_header
+    {
+        width: 100%;
+    }
+    
+    .sh_link
+    {
+        width: 40%;
+    }
+    
+    .sh_boks
+    {
+    }
+    
+    .gmap
+    {
+        height: 500px;
+    }
+    
+    .showreel_video
+    {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .showreel
+    {
+        height: 450px;
+        overflow: hidden;
+    }
+}
