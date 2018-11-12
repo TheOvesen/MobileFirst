@@ -97,7 +97,8 @@ p
 .fyld
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     grid-area: fyld;
 }
 
@@ -110,6 +111,7 @@ p
 .fyld_header
 {
     text-align: center;
+    width: 100%;
 }
 
 .fyld_bild
@@ -213,33 +215,17 @@ p
     cursor: pointer;
 }
 
-@media only screen and (min-width: 800px)
+@media only screen and (min-width: 1000px)
 {
     .fyld_element
     {
         width: 30%;
         margin: auto auto 0 auto;
-        align-self: flex-start;
-    }
-    
-    .fyld
-    {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .fyld_header
-    {
-        width: 100%;
     }
     
     .sh_link
     {
         width: 40%;
-    }
-    
-    .sh_boks
-    {
     }
     
     .gmap
