@@ -206,7 +206,7 @@ p {
 @media only screen and (min-width: 1000px) {
     .fyld_element {
         width: 30%;
-        margin: auto auto auto;
+        margin: auto auto 0 auto;
     }
 
     .sh_link {
