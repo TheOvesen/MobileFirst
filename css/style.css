@@ -119,6 +119,17 @@ p {
     border-color: #f88;
 }
 
+.om_os
+{
+    width: 100%;
+    column-width: 400px;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
 .gmap {
     width: 100%;
     height: 320px;
