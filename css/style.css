@@ -137,7 +137,6 @@ p {
 
 .sidefod {
     grid-area: bund;
-    height: 55px;
     background-color: #f26522;
 }
 
@@ -196,7 +195,39 @@ p {
     cursor: pointer;
 }
 
+.sf_container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sf_vanish
+{
+    display: none;
+    width: 0;
+}
+
+.sf_tekst
+{
+    width: auto;
+    color: white;
+    font-size: 11pt;
+    margin-right: auto;
+    z-index: 3;
+}
+
 @media only screen and (min-width: 800px) {
+    .sf_container
+    {
+        width: calc(100% - 130px);
+    }
+    
+    .sf_vanish
+    {
+        display: block;
+    }
+    
     .fyld_element {
         width: 40%;
         margin: auto auto 0 auto;
