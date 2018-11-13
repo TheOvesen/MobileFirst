@@ -1,82 +1,70 @@
-body
-{
+body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
 }
 
-p
-{
+p {
     padding: 0 10px 0 10px;
 }
 
-.linkstate a
-{
+.linkstate a {
     color: red;
     text-decoration: none;
 }
 
-.linkstate a:hover
-{
+.linkstate a:hover {
     color: #f88;
 }
 
-.container
-{
+.container {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "siho"
         "shoree"
         "fyld"
         "bund";
 }
 
-.sidehoved
-{
+.sidehoved {
     grid-area: siho;
     background-color: white;
-    
+
     display: flex;
     flex-direction: row;
 }
 
-.sh_logo
-{
+.sh_logo {
     align-self: center;
     width: 100%;
 }
 
-.sh_link
-{
+.sh_link {
     width: 60%;
 }
 
-.sh_boks
-{
+.sh_boks {
     height: auto;
     min-width: 0;
     margin: 10px 0 10px auto;
 }
 
-.showreel
-{
+.showreel {
     grid-area: shoree;
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.showreel_video
-{
+.showreel_video {
     width: 100%;
     overflow: hidden;
     align-self: center;
     z-index: 1;
 }
 
-.showreel_tekst a
-{
+.showreel_tekst a {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -88,45 +76,38 @@ p
     z-index: 2;
 }
 
-.showreel_tekst:hover a
-{
+.showreel_tekst:hover a {
     color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 255, 255, 1);
 }
 
-.fyld
-{
+.fyld {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     grid-area: fyld;
 }
 
-.fyld_element
-{
+.fyld_element {
     position: relative;
     width: 100%;
 }
 
-.fyld_header
-{
+.fyld_header {
     text-align: center;
     width: 100%;
 }
 
-.fyld_bild
-{
+.fyld_bild {
     width: 100%;
     overflow: hidden;
 }
 
-.fyld_tekst
-{
+.fyld_tekst {
     width: 60%;
 }
 
-.fyld_pris
-{
+.fyld_pris {
     border: 2px solid red;
     float: right;
     margin-right: 10px;
@@ -134,55 +115,47 @@ p
     padding: 5px 10px 5px 10px;
 }
 
-.fyld_pris:hover
-{
+.fyld_pris:hover {
     border-color: #f88;
 }
 
-.gmap
-{
+.gmap {
     width: 100%;
     height: 320px;
 }
 
-.sidefod
-{
+.sidefod {
     grid-area: bund;
     height: 55px;
     background-color: #f26522;
 }
 
-@keyframes elips
-{
-    from
-    {
+@keyframes elips {
+    from {
         max-width: 25%;
         filter: opacity(70%);
     }
-    to
-    {
+
+    to {
         max-width: 35%;
         filter: opacity(100%);
     }
 }
 
-@keyframes elipsBack
-{
-    from
-    {
+@keyframes elipsBack {
+    from {
         max-width: 35%;
         filter: opacity(100%);
-        
+
     }
-    to
-    {
+
+    to {
         max-width: 25%;
         filter: opacity(70%);
     }
 }
 
-.sf_ellipse
-{
+.sf_ellipse {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -193,15 +166,13 @@ p
     animation-fill-mode: forwards;
 }
 
-.sf_ellipse:hover
-{
+.sf_ellipse:hover {
     animation-name: elips;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-.sf_menu
-{
+.sf_menu {
     position: fixed;
     right: 10px;
     bottom: 50px;
@@ -210,38 +181,49 @@ p
     font-weight: bold;
 }
 
-.sf_menu:hover
-{
+.sf_menu:hover {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 1000px)
-{
-    .fyld_element
-    {
-        width: 30%;
+@media only screen and (min-width: 800px) {
+    .fyld_element {
+        width: 40%;
         margin: auto auto 0 auto;
+
     }
-    
-    .sh_link
-    {
+
+    .showreel {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    .tablet_element {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .fyld_element {
+        width: 30%;
+        margin: auto auto auto;
+    }
+
+    .sh_link {
         width: 40%;
     }
-    
-    .gmap
-    {
+
+    .gmap {
         height: 500px;
     }
-    
-    .showreel_video
-    {
+
+    .showreel_video {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
     }
-    
-    .showreel
-    {
+
+    .showreel {
         height: 450px;
         overflow: hidden;
     }
