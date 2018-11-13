@@ -122,7 +122,7 @@ p {
 .om_os
 {
     width: 100%;
-    column-width: 400px;
+    /*column-width: 400px;*/
 }
 
 .bold
